@@ -3,16 +3,17 @@
 
 int main(int argc, char* argv[])
 {
-	if (argc < 3)
+	if (argc < 3)					//print execution message
 	{
 		std::cout << "not correct execution. program exit." << std::endl;
 		return 100;
 	}
 
-	int i = argc - 2;
-	int sum = atoi(argv[1]), sub = atoi(argv[1]), mul = atoi(argv[1]), div = atoi(argv[1]), max = atoi(argv[1]), min = atoi(argv[1]);
+	int i = argc - 2;				//loop count
+	int sum = atoi(argv[1]), sub = atoi(argv[1]), mul = atoi(argv[1]), div = atoi(argv[1]);	//initailization
+	int max = atoi(argv[1]), min = atoi(argv[1]);
 
-	for (i; i > 0; i--)
+	for (i; i > 0; i--)				//calculation in loop
 	{
 		int new_value = atoi(argv[i + 1]);
 		sum += new_value;
@@ -22,6 +23,7 @@ int main(int argc, char* argv[])
 		max = (max > new_value) ? max : new_value;
 		min = (min > new_value) ? new_value : min;
 	}
+	//print out result
 	std::cout << "sum : " << sum << std::endl;
 	std::cout << "sub : " << sub << std::endl;
 	std::cout << "mul : " << mul << std::endl;
